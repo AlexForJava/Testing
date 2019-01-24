@@ -7,14 +7,10 @@ import java.util.List;
  * Created by Space on 24.01.2019.
  */
 public class Professor extends Human {
-
     private List<Group> groups;
 
     public Professor() {
-        super();
-        setName("Alex");
-        setSurname("Kim");
-        setAge(60);
+        super(60, "Alex", "Kim");
         if (groups == null)
             groups = new ArrayList<Group>();
     }

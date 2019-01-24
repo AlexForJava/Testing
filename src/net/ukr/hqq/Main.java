@@ -7,8 +7,8 @@ public class Main {
     public static void main(String[] args) {
         Student s1 = new Student(19, "Ivan", "Ivanov");
         Student s2 = new Student(18, "Kolya", "Petrov");
-        Student s3 = new Student(17, "Dima", "Con");
-        Student s4 = new Student(19, "Anna", "Korolova");
+        Student s3 = new Student(17, "Dima", "Conan");
+        Student s4 = new Student(19, "Anna", "Korlova");
         Student s5 = new Student(20, "Dash", "Golads");
 
         Group group = new Group("AA19");

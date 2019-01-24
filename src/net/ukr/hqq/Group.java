@@ -38,7 +38,7 @@ public class Group {
 
     public void addStudent(Student student) {
         group.add(student);
-        student.setGroupName(groupName);
+        student.setStudentGroupName(groupName);
     }
 
     public int size() {
@@ -46,21 +46,13 @@ public class Group {
     }
 
     public void setCaptainRand() {
-        if (!hasCaptain()) {
-            Random rnd = new Random();
-            group.get(rnd.nextInt(group.size())).setCaptain(true);
-        } else {
-            for (Student s : group)
-                s.setCaptain(false);
-            hasCaptain();
-            setCaptainRand();
-        }
+        Random rnd = new Random();
+        setCaptain(rnd.nextInt(group.size()));
     }
 
     public void setCaptain(int i) {
         for (Student student : group)
             student.setCaptain(false);
-
         getStudent(i).setCaptain(true);
     }
 
@@ -72,5 +64,11 @@ public class Group {
         if (i > size())
             throw new IllegalArgumentException();
         return group.get(i);
+    }
+
+    public Student getCaptain() {
+        for (Student s : group)
+            if (s.isCaptain()) return s;
+        return null;
     }
 }

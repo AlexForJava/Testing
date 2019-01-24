@@ -4,7 +4,7 @@ package net.ukr.hqq;
  * Created by Space on 24.01.2019.
  */
 public class Student extends Human{
-        private String groupName;
+    private String groupName;
     private boolean captain;
 
     public Student(int age, String name, String surname) {
@@ -20,17 +20,17 @@ public class Student extends Human{
     }
 
 
-    public String getGroupName() {
+    public String getStudentGroupName() {
         return groupName;
     }
 
 
-    public void setGroupName(String groupName) {
+    public void setStudentGroupName(String groupName) {
         this.groupName = groupName;
     }
 
     @Override
     public String toString() {
-        return getName() + " " + getSurname() + " " + getAge() + "e.o. in group " + groupName + ((captain) ? " староста" : "");
+        return getName() + "\t" + getSurname() + "\t\t" + getAge() + "e.o. in group " + groupName + ((captain) ? " староста" : "");
     }
 }
