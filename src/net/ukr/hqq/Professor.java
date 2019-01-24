@@ -6,24 +6,21 @@ import java.util.List;
 /**
  * Created by Space on 24.01.2019.
  */
-public class Professor {
-    private String name;
-    private String surname;
-    private int age;
+public class Professor extends Human {
+
     private List<Group> groups;
 
     public Professor() {
-        name = "Alex";
-        surname = "Kim";
-        age = 60;
+        super();
+        setName("Alex");
+        setSurname("Kim");
+        setAge(60);
         if (groups == null)
             groups = new ArrayList<Group>();
     }
 
-    public Professor(String name, String surname, int age) {
-        this.name = name;
-        this.surname = surname;
-        this.age = age;
+    public Professor(int age, String name, String surname) {
+        super(age, name, surname);
         if (groups == null)
             groups = new ArrayList<Group>();
     }

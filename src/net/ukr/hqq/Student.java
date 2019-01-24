@@ -3,17 +3,14 @@ package net.ukr.hqq;
 /**
  * Created by Space on 24.01.2019.
  */
-public class Student {
-    private int age;
-    private String name;
-    private String surname;
-    private String groupName;
+public class Student extends Human{
+        private String groupName;
     private boolean captain;
 
     public Student(int age, String name, String surname) {
-        this.age = age;
-        this.name = name;
-        this.surname = surname;
+        setAge(age);
+        setName(name);
+        setSurname(surname);
     }
 
     public boolean isCaptain() {
@@ -24,33 +21,11 @@ public class Student {
         this.captain = captain;
     }
 
-    public int getAge() {
-        return age;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
 
     public String getGroupName() {
         return groupName;
     }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
 
     public void setGroupName(String groupName) {
         this.groupName = groupName;
@@ -58,6 +33,6 @@ public class Student {
 
     @Override
     public String toString() {
-        return name + " " + surname + " " + age + "e.o. in group " + groupName + ((captain) ? " староста" : "");
+        return getName() + " " + getSurname() + " " + getAge() + "e.o. in group " + groupName + ((captain) ? " староста" : "");
     }
 }

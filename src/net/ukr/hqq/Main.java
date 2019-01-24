@@ -23,5 +23,8 @@ public class Main {
 
         group.setCaptainRand();
         professor.roolCallAll();
+
+        System.out.println();
+        professor.roolCall(group.getGroupName());
     }
 }
