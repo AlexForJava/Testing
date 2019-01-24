@@ -8,9 +8,7 @@ public class Student extends Human{
     private boolean captain;
 
     public Student(int age, String name, String surname) {
-        setAge(age);
-        setName(name);
-        setSurname(surname);
+        super(age, name, surname);
     }
 
     public boolean isCaptain() {
